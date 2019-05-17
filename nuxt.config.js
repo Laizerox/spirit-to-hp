@@ -31,7 +31,14 @@ export default {
   loading: { color: '#fff' },
   css: ['~/assets/style/app.styl'],
   plugins: ['@/plugins/vuetify'],
-  modules: [],
+  modules: [
+    [
+      '@nuxtjs/google-analytics',
+      {
+        id: 'UA-140385477-1'
+      }
+    ]
+  ],
   build: {
     transpile: ['vuetify/lib'],
     plugins: [new VuetifyLoaderPlugin()],
