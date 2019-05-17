@@ -5,8 +5,8 @@
         <nuxt />
       </v-container>
     </v-content>
-    <v-footer>
-      <span>&copy; 2019</span>
+    <v-footer class="pa-2">
+      <span>Laizerox &copy; 2019</span>
     </v-footer>
   </v-app>
 </template>

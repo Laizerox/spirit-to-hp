@@ -1,7 +1,17 @@
 import VuetifyLoaderPlugin from 'vuetify-loader/lib/plugin';
 import pkg from './package';
 
+const routerBase =
+  process.env.DEPLOY_ENV === 'GH_PAGES'
+    ? {
+        router: {
+          base: '/spirit-to-hp/'
+        }
+      }
+    : {};
+
 export default {
+  ...routerBase,
   mode: 'spa',
   head: {
     title: pkg.name,
@@ -17,9 +27,6 @@ export default {
         href: 'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons'
       }
     ]
-  },
-  router: {
-    base: '/spirit-to-hp/'
   },
   loading: { color: '#fff' },
   css: ['~/assets/style/app.styl'],
